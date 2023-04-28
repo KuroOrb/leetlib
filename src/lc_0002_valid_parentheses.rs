@@ -12,6 +12,9 @@ pub fn is_valid(s: String) -> bool {
                         return false
                     }
                 }
+                else {
+                    return false
+                }
             }
             _ => return false
         }
@@ -41,5 +44,10 @@ mod test {
     #[test]
     fn empty_string() {
         assert!(is_valid("".to_string()))
+    }
+
+    #[test]
+    fn example4() {
+        assert!(!is_valid("]".to_string()))
     }
 }
